@@ -1,4 +1,4 @@
-*{
+* {
     font-family: "Roboto", sans-serif;
     padding: 0;
     margin: 0;
@@ -13,13 +13,13 @@ html {
 
 /*----------------------------------------------------navbar-----------------------------------------------------*/
 
-.navigation{
+.navigation {
     display: flex;
 }
 
 
 header {
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -27,15 +27,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index:100;
+    z-index: 100;
     border-bottom: 1px solid black;
     position: fixed;
     backdrop-filter: blur(100px);
-  -webkit-backdrop-filter: blur(100px);
-  background: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(100px);
+    background: rgba(255, 255, 255, 0.6);
 }
 
-.navigation a{
+.navigation a {
     color: black;
     padding-left: 10px;
     padding-right: 10px;
@@ -44,7 +44,7 @@ header {
     font-weight: 600;
 }
 
-.link a{
+.link a {
     color: black;
     text-decoration: none;
     padding-left: 10px;
@@ -52,7 +52,7 @@ header {
 }
 
 
-.logo a{
+.logo a {
     color: black;
     padding-left: 10px;
     padding-right: 10px;
@@ -60,7 +60,7 @@ header {
 
 }
 
-.about a{
+.about a {
     color: black;
     padding-left: 10px;
     padding-right: 10px;
@@ -81,21 +81,21 @@ header {
     width: 100%;
     padding: 10px 10px 10px;
     border: none;
-    outline: none; 
+    outline: none;
     user-select: none;
 }
 
 
-.footer-mainpage{
+.footer-mainpage {
 
-    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     border-top: 1px solid black;
 
-    
+
 }
 
 /*----------------------------------------------------footer-----------------------------------------------------*/
@@ -127,7 +127,7 @@ header {
     margin-right: 10px;
 }
 
-.copiright{
+.copiright {
     width: 100%;
     object-fit: contain;
     object-position: center;
@@ -136,8 +136,9 @@ header {
     padding-bottom: 20px;
     font-size: 12px;
 
-    
+
 }
+
 /*------------------------------------------------------sekce-pro-boty-----------------------------------------------------*/
 
 .shoe-container {
@@ -155,7 +156,7 @@ header {
     position: relative;
     overflow: hidden;
     text-decoration: none;
-    color: black ;
+    color: black;
 }
 
 .shoe img {
@@ -208,7 +209,7 @@ header {
 #slideshow img {
     flex: 0 0 auto;
     width: 100%;
-    height: 100%;    
+    height: 100%;
     object-fit: contain;
     object-position: center;
 }
@@ -218,7 +219,8 @@ header {
     width: 40%;
 
 }
-#shoeName{
+
+#shoeName {
     border: 1px solid black;
     width: 70%;
     align-items: center;
@@ -232,7 +234,7 @@ header {
 
 }
 
-#shoeDescription{
+#shoeDescription {
     border-left: 1px solid black;
     border-right: 1px solid black;
     width: 70%;
@@ -245,7 +247,7 @@ header {
     padding: 10px;
 }
 
-#shoeDescription p{
+#shoeDescription p {
     font-size: 1px;
 
 }
@@ -266,7 +268,7 @@ header {
     justify-content: center;
 }
 
-#addToCart{
+#addToCart {
     border-left: 1px solid black;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
@@ -306,10 +308,10 @@ header {
     opacity: 1;
 }
 
-.shoe-size-dropdown{
+.shoe-size-dropdown {
     width: 100%;
     border: none;
-    outline: none; 
+    outline: none;
     user-select: none;
     align-items: center;
     justify-content: center;
@@ -317,22 +319,20 @@ header {
 }
 
 
-      .shoe-size-dropdown {
-        appearance: none;
-        outline: none; 
-        cursor: pointer; 
-        background-color: white;
+.shoe-size-dropdown {
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
 
-        border-radius: 5px;  /* round the border corners */
-        width: 200px;
-        height: 40px;
-        font-weight: 200;
-        text-align: center;
-        width: 100%;
-        border: none;
-      }
-
-
+    border-radius: 5px; /* round the border corners */
+    width: 200px;
+    height: 40px;
+    font-weight: 200;
+    text-align: center;
+    width: 100%;
+    border: none;
+}
 
 
 /*------------------------------------------------------hero-image-----------------------------------------------------*/
@@ -341,16 +341,16 @@ header {
     width: 100%;
     height: 600px;
     overflow: hidden;
-  }
-  
-  .hero-container video {
+}
+
+.hero-container video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: blur(5px);
-  }
-  
-  .hero-text {
+}
+
+.hero-text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -360,10 +360,10 @@ header {
     color: #fff;
     text-align: center;
     z-index: 1;
-  }
+}
 
-  .gender-banner {
-    height: 200px; 
+.gender-banner {
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -377,7 +377,7 @@ header {
 
 
 .gender-nadpis {
-    height: 50px; 
+    height: 50px;
     display: flex;
     justify-content: left;
     margin: 20px;
@@ -400,16 +400,19 @@ header {
 .left-section, .right-section {
     width: 50%;
     margin: 5px;
-    margin-top: 50px;
+    margin-top: 55px;
     border: 1px solid black;
+    overflow: hidden;
+    max-height: 95vh;
+
 
 }
 
 .scrollable-container {
-    position: fixed;
-    scrollbar-width: none;
-}
+    overflow-y: auto;
+    max-height: 100%;
 
+}
 
 
 .field-container {
@@ -419,7 +422,7 @@ header {
     align-items: center;
     width: 48%;
 }
-    
+
 
 .field-container label {
     display: block;
@@ -430,7 +433,7 @@ header {
     width: 100%;
     padding: 3px;
     margin-bottom: 10px;
-    
+
 }
 
 .checkout-button-container {
@@ -444,18 +447,27 @@ header {
     border: none;
     cursor: pointer;
     width: 100%;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
 }
-.contact-info{
+
+.contact-info {
     display: flex;
 }
-.nadpis{
-    font-size: 15px;
+
+.nadpis {
+    font-size: 25px;
     font-weight: 600;
     margin: 14px;
     text-align: left;
+    height: 8vh;
+    padding-top: 5px;
+
 }
 
-.contact-info{
+.contact-info {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid black;
@@ -465,12 +477,12 @@ header {
     width: 100%;
     padding: 10px 10px 10px;
     border: none;
-    outline: none; 
+    outline: none;
     user-select: none;
     border-top: 1px solid black;
 }
 
-.shipping-details{
+.shipping-details {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid black;
@@ -481,86 +493,28 @@ header {
     width: 100%;
     padding: 10px 10px 10px;
     border: none;
-    outline: none; 
+    outline: none;
     user-select: none;
     border-top: 1px solid black;
 }
 
-/*------------------------------------------------------payment-----------------------------------------------------*/
-
-.payment-methods {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-  }
-  
-  .payment-image {
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-    filter: grayscale(100%) opacity(0.5);
-    transition: filter 0.3s ease;
-    cursor: pointer;
-  }
-  
-  input[type="radio"] {
-    display: none;
-  }
-  
-  input[type="radio"]:checked + img {
-    filter: grayscale(0%) opacity(1);
-  }
-
-
-  .payment-form{
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid black;
-}
-
-
-.payment-form input[type="text"] {
-    width: 100%;
-    padding: 10px 10px 10px;
-    border: none;
-    outline: none; 
-    user-select: none;
-    border-top: 1px solid black;
-}
-
-.dropdown{
-    width: 100%;
-    padding: 10px 10px 10px;
-    border: none;
-    outline: none; 
-    user-select: none;
-    border-top: 1px solid black;
-    appearance: none;
-    outline: none; 
-    cursor: pointer; 
-    
-}
 /*------------------------------------------------------shopping-cart/product-----------------------------------------------------*/
 
 .product-block {
     display: flex;
     border-bottom: 1px solid black;
-    padding: 5px;
-    height: 150px;
+    height: 175px;
 
 }
 
 .product-block img {
-    width: 100px;
-    height: 100px;
+    width: 15%;
+    height: 150px;
     object-fit: cover;
-    margin-right: 20px;
+    margin: 20px;
     object-fit: contain;
     object-position: center;
-    margin-left: 20px;
+    
 }
 
 .product-info {
@@ -569,7 +523,8 @@ header {
 }
 
 .product-name {
-    font-size: 16px;
+    font-size: 17px;
+    margin-top: 10px;
 }
 
 .product-price {
@@ -579,11 +534,15 @@ header {
     justify-content: right;
     align-items: right;
     margin-top: 15px;
+    margin-left: 10px;
 
 }
 
-.product-colorway{
-    margin: 5px;
+
+
+.product-size {
+    margin-left: 10px ;
+    margin-top: 5px;
 
 }
 
@@ -598,23 +557,84 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .scrollable-container {
+}
+
+.scrollable-container {
     position: relative;
-    overflow-y:scroll;
-  }
-  
-  .price-product-summary {
+    overflow-y: scroll;
+}
+
+.price-product-summary {
     font-size: 18px;
     font-weight: bold;
-  }
-  
-  .Shipping-summary {
+}
+
+.Shipping-summary {
     font-size: 16px;
-  }
-  
-  .finalprice-summary {
+}
+
+.finalprice-summary {
     font-size: 20px;
     font-weight: bold;
-  }
+}
+/*------------------------------------------------------payment-----------------------------------------------------*/
+
+.payment-methods {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 10vh;
+}
+
+.payment-image {
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    filter: grayscale(100%) opacity(0.5);
+    transition: filter 0.3s ease;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + img {
+    filter: grayscale(0%) opacity(1);
+}
+
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+}
+
+
+.payment-form input[type="text"] {
+    width: 100%;
+    padding: 10px 10px 10px;
+    border: none;
+    outline: none;
+    user-select: none;
+    border-top: 1px solid black;
+}
+
+.dropdown {
+    width: 100%;
+    padding: 10px 10px 10px;
+    border: none;
+    outline: none;
+    user-select: none;
+    border-top: 1px solid black;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+
+
