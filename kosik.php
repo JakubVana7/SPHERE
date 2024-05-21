@@ -27,11 +27,11 @@
 
 
 
-    function getcena() {
+    function ahoj() {
         // Your function implementation here
         // For example:
         return 100;
     }
 
-    echo getcena();
+    echo ahoj();
 ?>

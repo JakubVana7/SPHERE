@@ -27,7 +27,7 @@
             <a href="cart.php" draggable="false">CART</a>
         </span>
 </header>
-<!-- produkt -->
+<!-- ahoj -->
 
 
 <div class="container">
