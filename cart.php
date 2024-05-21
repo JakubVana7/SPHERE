@@ -29,7 +29,6 @@
 <main>
     <section class="cart-section">
         <div class="left-section">
-            <!-- Scrollable container for products added to the cart -->
             <div class="scrollable-container">
                 <?php
                 $servername = "localhost";
@@ -57,8 +56,6 @@
         </div>
         <div class="right-section">
         <div class="scrollable-container">
-
-            <!-- Contact information -->
             <form action="" method="get">
                 <div>
                     <h1 class="nadpis">CONTACT INFO</h1>
@@ -70,8 +67,6 @@
 
                     </div>
                 </div>
-                <!-- Shipping details -->
-
                 <div>
                     <h1 class="nadpis">SHIPPING DETAILS</h1>
                     <div class="shipping-details">
@@ -103,11 +98,8 @@
                             </label>
                         </div>
                     </div>
-                    <!-- Fill out information for credit card, PayPal, etc. -->
                     <div class="payment-form">
-                        <!-- Payment form fields -->
                         <h1 class="nadpis">PAYMENT DETAILS</h1>
-                        <!-- Card payment-->
                         <input type="text" name="cardNumber" placeholder="CARD NUMBER">
                         <input type="text" name="cvv" placeholder="CVV">
                         <select name="expM" class="dropdown">
@@ -138,15 +130,11 @@
                             <option value="y9">2032</option>
                             <option value="y10">2033</option>
                         </select>
-                        <!-- paypal,apple payment-->
                         <input type="text" name="email2" placeholder="E-MAIL">
                     </div>
-
-
-                    <!-- Checkout button -->
                     <div class="checkout-button-container">
                         <input type="submit" class="checkout-button" name="submit" value="CHECKOUT">
-                        </div>
+                    </div>
             </form>
         </div>
         </div>

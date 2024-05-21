@@ -199,8 +199,7 @@ header {
     margin-left: 60px;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;  
     scroll-behavior: smooth;
     display: flex;
     margin-top: 5%;
@@ -403,7 +402,7 @@ header {
     margin-top: 55px;
     border: 1px solid black;
     overflow: hidden;
-    max-height: 95vh;
+    max-height: 92vh;
 
 
 }
@@ -503,13 +502,13 @@ header {
 .product-block {
     display: flex;
     border-bottom: 1px solid black;
-    height: 175px;
+    height: 150px;
 
 }
 
 .product-block img {
     width: 15%;
-    height: 150px;
+    height: 120px;
     object-fit: cover;
     margin: 20px;
     object-fit: contain;
