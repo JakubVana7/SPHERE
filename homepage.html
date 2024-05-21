@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <title>HOMEPAGE</title>
+    <meta name="author" content="Zdeněk Rut, Jakub Váňa, TOmáš u">
+    <meta name="description" content="Webová aplikace">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+    <header>
+
+<!-- navbar -->
+
+        <span class="link">
+            <a href="men.html" draggable="false">MEN</a>
+            <a href="woman.html" draggable="false">WOMAN</a>
+        </span>
+        <nav class="navigation">
+            <a href="index.html" draggable="false">SPHERE</a>
+        </nav>
+        <span class="about">
+            <a href="about.html" draggable="false">ABOUT</a>
+            <a href="cart.php" draggable="false">CART</a>
+        </span>
+</header>
+
+<!-- vyhledavani -->
+
+<form action="search.php" method="get">
+    <div class="search-bar">
+      <input type="text" name="search" placeholder="WHAT ARE YOU LOOKING FOR?" onkeypress="return event.keyCode != 13;">
+    </div>
+  </form>
+
+<!-- hero -->
+
+<div class="hero-container">
+    <video loop autoplay muted>
+      <source src="./images/5275204-uhd_4096_2160_25fps.mp4" type="video/mp4">
+    </video>
+    <h1 class="hero-text">SPHERE</h1>
+</div>
+
+  <div class="gender-nadpis">
+    <h1 class="hero-heading">MEN</h1>
+</div>
+
+<!-- produkty -->
+  <section>
+
+        <div class="shoe-container">
+            <a href="./dynamic.php?id=1" class="shoe" data-price="$1200">
+                <img src="./images/jordan1-reversemocha-1.webp">
+                <div class="name">TRAVIS SCOTT x AIR JORDAN 1 LOW 'Reverse Mocha'</div>
+            </a>
+
+            <a href="./dynamic.php?id=2" class="shoe" data-price="$160">
+                <img src="./images/airmax-dn-1.webp">
+                <div class="name">AIR MAX DN 'Black'</div>
+            </a>
+            <a href="./dynamic.php?id=3" class="shoe" data-price="$220">
+                <img src="./images/jordan5-1.webp">
+                <div class="name">AIR JORDAN 5 RETRO SE 'Sail'</div>
+            </a>
+            <a href="./dynamic.php?id=4" class="shoe" data-price="$700">
+                <img src="./images/rickowens-1.webp">
+                <div class="name">RICK OWENS DRKSHDW HEXA HIGH 'Black Milk'</div>
+            </a>
+            <a href="./dynamic.php?id=5" class="shoe" data-price="$150">
+                <img src="./images/sbdunk-ebay-1.webp">
+                <div class="name">DUNK LOW SB 'Sandy Bodecker'</div>
+            </a>
+            <a href="./dynamic.php?id=6" class="shoe" data-price="$400">
+                <img src="./images/supreme-timberland-1.webp">
+                <div class="name">SUPREME x TIMBERLAND 'Whey'</div>
+            </a>
+            <a href="./dynamic.php?id=7" class="shoe" data-price="$600">
+                <img src="./images/adidas-walesbonner-1.webp">
+                <div class="name">WALES BONNER x SAMBA 'Silver Metallic'</div>
+            </a>
+            <a href="./dynamic.php?id=8" class="shoe" data-price="$300">
+                <img src="./images/sbdunk-huf-1.webp">
+                <div class="name">HUF x DUNK LOW SB 'New York'</div>
+            </a>
+            <a href="./dynamic.php?id=9" class="shoe" data-price="$140">
+                <img src="./images/salomon-xt-6-1.webp">
+                <div class="name">XT-6 SKYLINE 'Bleached Sand Dazzling Blue'</div>
+            </a>
+            <a href="./dynamic.php?id=10" class="shoe" data-price="$150">
+                <img src="./images/airmax-plus-1.webp">
+                <div class="name">AIR MAX PLUS'Triple Black'</div>
+            </a>
+        </div>
+      </section>
+
+      <div class="gender-nadpis">
+      <h1 class="hero-heading">WOMAN</h1>
+  </div>
+  
+  <!-- produkty -->
+    <section>
+  
+          <div class="shoe-container">
+            <a href="./dynamic.php?id=11" class="shoe" data-price="$100">
+                <img src="./images/dunk-blueconcord-1.webp">
+                <div class="name">DUNK LOW 'Concord'</div>
+            </a>
+
+            <a href="./dynamic.php?id=12" class="shoe" data-price="$140">
+                <img src="./images/jordan4-hyperviolet-1.webp">
+                <div class="name">AIR JORDAN 4 RETRO GS 'Hyper Violet'</div>
+            </a>
+            <a href="./dynamic.php?id=13" class="shoe" data-price="$400">
+                <img src="./images/jordan4-frozenmoments-1.webp">
+                <div class="name">AIR JORDAN 4 RETRO GS 'Frozen Moments'</div>
+            </a>
+            <a href="./dynamic.php?id=14" class="shoe" data-price="$600">
+                <img src="./images/bapesta-1.webp">
+                <div class="name">BAPESTA 'Black'</div>
+            </a>
+            <a href="./dynamic.php?id=15" class="shoe" data-price="$380">
+                <img src="./images/rickowens-converse-1.webp">
+                <div class="name">RICK OWENS x CONVERSE MID 'Black Cloud Cream'</div>
+            </a>
+            <a href="./dynamic.php?id=16" class="shoe" data-price="$350">
+                <img src="./images/supreme-airmax-1.webp">
+                <div class="name">SUPREME x AIR MAX 98 TL SP 'Black'</div>
+            </a>
+            <a href="./dynamic.php?id=17" class="shoe" data-price="$120">
+                <img src="./images/adidas-gazelle-1.webp">
+                <div class="name">Wmns Gazelle Indoor 'Collegiate Green Pink'</div>
+            </a>
+            <a href="./dynamic.php?id=18" class="shoe" data-price="$450">
+                <img src="./images/newballance-1.webp">
+                <div class="name">Joe Freshgoods x 1000 'When Things Were Pure Pack - Pink Mink'</div>
+            </a>
+            <a href="./dynamic.php?id=19" class="shoe" data-price="$200">
+                <img src="./images/jordan3-peach-1.webp">
+                <div class="name">Wmns Air Jordan 3 Retro 'Georgia Peach'</div>
+            </a>
+            <a href="./dynamic.php?id=20" class="shoe" data-price="$1500">
+                <img src="./images//jordan4-offwhite-1.webp">
+                <div class="name">Off-White x Wmns Air Jordan 4 Retro SP 'Sail'</div>
+            </a>
+          </div>
+        </section>
+  
+  
+<footer id="footer">
+    <div class="footer-section">
+        <h4>WE SECURELY ACCEPT</h4>
+        <div class="payment-icons">
+            <img src="./images/cc-visa-brands.svg" alt="Visa">
+            <img src="./images/cc-mastercard-brands.svg" alt="Mastercard">
+            <img src="./images/cc-paypal-brands.svg" alt="PayPal">
+            <img src="./images/cc-applepay-brands.svg" alt="Apple Pay">
+        </div>
+    </div>
+    <div class="footer-section">
+        <h4>CUSTOMER SUPPORT</h4>
+        <p>Our client advisors are available Mon-Sat 6am - 4pm</p>
+        
+    </div>
+    <div class="footer-section">
+        <h4>FREE SHIPPING, FREE RETURNS</h4>
+        <p>Returns and exchanges are free.</p>
+    </div>
+
+</footer>
+    <footer>
+        <div class="copiright">
+            &copy; Copyright 2024 SPHERE
+    
+        </div>
+    </footer>
+
+    <script src="./sricpt.js"></script>
