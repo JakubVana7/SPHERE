@@ -30,28 +30,56 @@
     <section class="cart-section">
         <div class="left-section">
             <div class="scrollable-container">
-                <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "vanaj";
-                $conn = new mysqli($servername, $username, $password, $dbname);
+            <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "vanaj";
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 
-                $sql = "SELECT DISTINCT kosik.idK, kosik.size, boty.idB, boty.shoeName, boty.price, boty.img1 FROM kosik, boty WHERE kosik.idB = boty.idB";
-                $result = $conn->query($sql);
+$sql= "SELECT DISTINCT kosik.idK, kosik.size, boty.idB, boty.shoeName, boty.price, boty.img1 FROM kosik, boty WHERE kosik.idB = boty.idB";
+$result = $conn->query($sql);
 
-                while ($row = $result->fetch_assoc()) {
+while ($row = $result->fetch_assoc()) {
 
-                    echo '<div class="product-block">';
-                    echo '<img src="' . $row['img1'] . '" alt="Product Image">';
-                    echo '<div class="product-info">';
-                    echo '<p class="product-name">' . $row['shoeName'] . '</p>';
-                    echo '<p class="product-price">'.' PRICE:' . $row['price'] . ' €</p>';
-                    echo '<p class="product-size">'.' SIZE:' . $row['size'] . '</p>';
-                    echo '</div></div>';
-                }
-                ?>
+    echo '<div class="product-block">';
+    echo '<img src="'.$row['img1'].'" alt="Product Image">';
+    echo '<div class="product-info">';
+    echo '<p class="product-name">'.$row['shoeName'].'</p>';
+    echo '<p class="product-price">'.$row['price'].' €</p>';
+    echo '<p class="product-size">'.$row['size'].'</p>';
+    echo '</div>';
+    echo '<div class="product-delete">';
+    echo '<form method="post" action="">';
+    echo '<input type="hidden" name="idKosik" value="'.$row['idK'].'">';//skryté ale hazí nám to id Košíku
+    echo '<button id="delete" type="submit" name="delete">Delete</button>';
+    echo '</form>';
+    echo '</div></div>';
+    
+}
+
+
+if(isset($_POST['idKosik'])){
+    $servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "vanaj";
+$conn = new mysqli($servername, $username, $password, $dbname);  
+
+    $idKosikDelete = $_POST['idKosik'];
+
+    $sql="DELETE FROM kosik WHERE idK = '$idKosikDelete'";
+    if ($conn->query($sql) === TRUE) {
+        header("Location: ".$_SERVER['PHP_SELF']); // This will refresh the page
+        exit;
+      } else {
+        echo "Error deleting record: " . $conn->error;
+      }
+    }
+
+
+?>
             </div>
         </div>
         <div class="right-section">
@@ -60,21 +88,21 @@
                 <div>
                     <h1 class="nadpis">CONTACT INFO</h1>
                     <div class="contact-info">
-                        <input type="text" name="Cname" placeholder="NAME">
-                        <input type="text" name="surname" placeholder="SURNAME">
-                        <input type="text" name="email" placeholder="E-MAIL">
-                        <input type="text" name="phone" placeholder="PHONE">
+                        <input type="text" name="Cname" placeholder="NAME" required>
+                        <input type="text" name="surname" placeholder="SURNAME" required>
+                        <input type="text" name="email" placeholder="E-MAIL" required>
+                        <input type="text" name="phone" placeholder="PHONE" required>
 
                     </div>
                 </div>
                 <div>
                     <h1 class="nadpis">SHIPPING DETAILS</h1>
                     <div class="shipping-details">
-                        <input type="text" name="address1" placeholder="ADDRESS LINE 1">
+                        <input type="text" name="address1" placeholder="ADDRESS LINE 1" required>
                         <input type="text" name="address2" placeholder="ADDRESS LINE 2">
-                        <input type="text" name="city" placeholder="CITY">
-                        <input type="text" name="country" placeholder="COUNTRY">
-                        <input type="text" name="psc" placeholder="ZIP CODE">
+                        <input type="text" name="city" placeholder="CITY" required>
+                        <input type="text" name="country" placeholder="COUNTRY" required>
+                        <input type="text" name="psc" placeholder="ZIP CODE" required>
                     </div>
 
                     <div>
@@ -97,9 +125,11 @@
                                 <img src="./images/visa.png" alt="Visa" class="payment-image">
                             </label>
                         </div>
+                        
                     </div>
                     <div class="payment-form">
                         <h1 class="nadpis">PAYMENT DETAILS</h1>
+                        <div class="card-information">
                         <input type="text" name="cardNumber" placeholder="CARD NUMBER">
                         <input type="text" name="cvv" placeholder="CVV">
                         <select name="expM" class="dropdown">
@@ -130,7 +160,11 @@
                             <option value="y9">2032</option>
                             <option value="y10">2033</option>
                         </select>
+                        </div>
+
+                        <div class="email2">
                         <input type="text" name="email2" placeholder="E-MAIL">
+                        </div>
                     </div>
                     <div class="checkout-button-container">
                         <input type="submit" class="checkout-button" name="submit" value="CHECKOUT">
@@ -142,6 +176,18 @@
 </main>
 
 <script src="sricpt.js"></script>
+<script>
+window.onload = function() {
+    var paymentMethods = document.getElementsByName('payment-method');
+    for (var i = 0; i < paymentMethods.length; i++) {
+        paymentMethods[i].addEventListener('change', function() {
+            document.querySelector('.card-information').style.display = (this.value == 'visa' || this.value == 'master-card') ? 'block' : 'none';
+            document.querySelector('.email2').style.display = (this.value == 'paypal' || this.value == 'apple-pay') ? 'block' : 'none';
+        });
+    }
+}
+</script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>
@@ -244,34 +290,14 @@ function shoeName()
     }
 }
 
-if (isset($_POST["payment-method"])) {
-    switch ($_POST["payment-method"]) {
-        case 'apple-pay':
-            # code...
-            break;
 
-        case 'paypal':
-            # code...
-            break;
+  
 
-        case 'master-card':
-            # code...
-            break;
-
-        case 'visa':
-            # code...
-            break;
-
-        default:
-            # code...
-            break;
-    }
-}
 
 
 if (isset($_GET["submit"])) {
     # code...
-
+    
 
     $servername = "localhost";
     $username = "root";

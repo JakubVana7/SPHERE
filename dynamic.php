@@ -42,7 +42,7 @@
         <form action="" method="post">
             <div id="sizes">
                 <select name="size" class="shoe-size-dropdown">
-                    <option id="m0-option">SELECT SIZE</option>
+                    <option id="m0-option" value="0">SELECT SIZE</option>
                     <option value="38">38</option>
                     <option value="38.5">38.5</option>
                     <option value="39">39</option>
@@ -207,7 +207,9 @@ if (isset($_POST["addToCart"])) {
     $password = "";
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
-
+    if ($size > 0) {
+        # code...
+    
     $sql = "INSERT INTO kosik (idB, size) VALUES ('$idBota', '$size')";
 
     if (mysqli_query($conn, $sql)) {
@@ -216,6 +218,10 @@ if (isset($_POST["addToCart"])) {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     $conn->close();
+    
+}else{
+    echo "SELECT SIZE";
+}
 }
 
 ?>
