@@ -497,6 +497,18 @@ header {
     border-top: 1px solid black;
 }
 
+.delete-button {
+    background: none;
+    border: none;
+    padding-right: 20px;
+    padding-top: 120px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.price-summary1{
+
+}
 /*------------------------------------------------------shopping-cart/product-----------------------------------------------------*/
 
 .product-block {

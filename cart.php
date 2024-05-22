@@ -37,7 +37,7 @@ $password = "";
 $dbname = "vanaj";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-
+$priceSummary=0;
 $sql= "SELECT DISTINCT kosik.idK, kosik.size, boty.idB, boty.shoeName, boty.price, boty.img1 FROM kosik, boty WHERE kosik.idB = boty.idB";
 $result = $conn->query($sql);
 
@@ -53,10 +53,13 @@ while ($row = $result->fetch_assoc()) {
     echo '<div class="product-delete">';
     echo '<form method="post" action="">';
     echo '<input type="hidden" name="idKosik" value="'.$row['idK'].'">';//skryté ale hazí nám to id Košíku
-    echo '<button id="delete" type="submit" name="delete">Delete</button>';
+    echo '<button class="delete-button" type="submit" name="DELETE">DELETE</button>';
     echo '</form>';
     echo '</div></div>';
-    
+
+    echo '<div class="price-summary1">';
+    $priceSummary = $priceSummary + $row['price'];
+    echo'</div>';
 }
 
 
@@ -80,6 +83,12 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 
 ?>
+            </div>
+            <div class="cart-summary">
+                <p>SHIPPING: </p>
+                <?php 
+                    echo "<p>FINAL PRICE: ".$priceSummary." €<p>";
+                ?>
             </div>
         </div>
         <div class="right-section">
@@ -129,7 +138,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
                     </div>
                     <div class="payment-form">
                         <h1 class="nadpis">PAYMENT DETAILS</h1>
-                        <div class="card-information">
+
+                        <div class="card-information" style="display: none">
                         <input type="text" name="cardNumber" placeholder="CARD NUMBER">
                         <input type="text" name="cvv" placeholder="CVV">
                         <select name="expM" class="dropdown">
@@ -162,7 +172,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
                         </select>
                         </div>
 
-                        <div class="email2">
+                        <div class="email2"  style="display: none">
                         <input type="text" name="email2" placeholder="E-MAIL">
                         </div>
                     </div>
