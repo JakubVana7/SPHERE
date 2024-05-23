@@ -70,8 +70,8 @@
         <div class='nakupy'>
             <?php
             $servername = "localhost";
-            $username = "root";
-            $password = "";
+            $username = 'mylocal'; 
+            $password = 'ZPgxK$r7#2QHCcy!';
             $dbname = "vanaj";
             $conn = new mysqli($servername, $username, $password, $dbname);
 

@@ -86,3 +86,6 @@ $(document).ready(function () {
 
 
 
+function closeAlert() {
+    this.parentElement.style.display = 'none';
+}

@@ -27,7 +27,6 @@
             <a href="about.php" draggable="false">ABOUT</a>
             <a href="cart.php" draggable="false">CART</a>
     </header>
-
     <main>
         <section class="cart-section">
             <div class="left-section">
@@ -35,8 +34,8 @@
                     <?php 
                     ob_start();
                     $servername = "localhost";
-                    $username = "root";
-                    $password = "";
+                    $username = 'mylocal'; 
+                     $password = 'ZPgxK$r7#2QHCcy!';
                     $dbname = "vanaj";
                     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -71,8 +70,8 @@
 
                     if (isset($_POST['idKosik'])) {
                         $servername = "localhost";
-                        $username = "root";
-                        $password = "";
+                        $username = 'mylocal'; 
+                         $password = 'ZPgxK$r7#2QHCcy!';
                         $dbname = "vanaj";
                         $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -226,8 +225,8 @@ ob_start();
 function summary()
 {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = 'mylocal'; 
+ $password = 'ZPgxK$r7#2QHCcy!';
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -251,13 +250,13 @@ function summary()
 function getID()
 {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = 'mylocal'; 
+ $password = 'ZPgxK$r7#2QHCcy!';
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
 
-    $sql = "SELECT idB FROM objednavka";
+    $sql = "SELECT idB FROM kosik";
     $result = $conn->query($sql);
     while ($row = $result->fetch_assoc()) {
 
@@ -267,8 +266,9 @@ function getID()
 
 
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = 'mylocal'; 
+
+ $password = 'ZPgxK$r7#2QHCcy!';
 $dbname = "vanaj";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -277,8 +277,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 function price()
 {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = 'mylocal'; 
+
+ $password = 'ZPgxK$r7#2QHCcy!';
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -298,8 +299,8 @@ function price()
 function shoeName()
 {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = 'mylocal'; 
+ $password = 'ZPgxK$r7#2QHCcy!';
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -327,8 +328,8 @@ if (isset($_GET["submit"])) {
 
 
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = 'mylocal'; 
+ $password = 'ZPgxK$r7#2QHCcy!';
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -336,14 +337,16 @@ if (isset($_GET["submit"])) {
         die("Connection failed: " . mysqli_connect_error());
     }
 
+    
+
     $sql = "INSERT INTO zakaznik (Cname, surname, email, phone, address1, address2, city, country, zip, cardNumber,cvv, expM,expY,email2)
         VALUES ('" . $_GET["Cname"] . "','" . $_GET['surname'] . "','" . $_GET['email'] . "','" . $_GET['phone'] . "','" . $_GET['address1'] . "','" . $_GET['address2'] . "','" . $_GET['city'] . "','" . $_GET['country'] . "','" . $_GET['psc'] . "','" . $_GET['cardNumber'] . "','" . $_GET['cvv'] . "','" . $_GET['expM'] . "','" . $_GET['expY'] . "','" . $_GET['email2'] . "')";
 
     if (mysqli_query($conn, $sql)) {
 
         $servername = "localhost";
-        $username = "root";
-        $password = "";
+        $username = 'mylocal'; 
+ $password = 'ZPgxK$r7#2QHCcy!';
         $dbname = "vanaj";
         $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -354,9 +357,9 @@ if (isset($_GET["submit"])) {
                 echo "Error deleting rows: " . mysqli_error($conn);
             }
             
-        echo "<div>";
-        echo "<p>ORDER HAS BEEN SUCCESFULLY MADE<p>";
-        echo "<p>ORDER SHOULD ARRIVE IN 7 DAYS<p>";
+            echo "<div class='alert'>";
+        header("Refresh: 3; cart.php");
+        echo "ORDER SUCCESSFULLY CREATED";
         echo "</div>";
 
     } else {
@@ -378,3 +381,5 @@ if (isset($_GET["submit"])) {
 
 ob_end_flush();
 ?>
+
+

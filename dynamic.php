@@ -7,7 +7,7 @@
     <title><?php echo shoeName() ?></title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <meta name="author" content="Jakub Váňa, Tomáš Ungr, Zdeněk Rut">
-    <meta name="keywords" content="E-shop, Boty">
+    <meta name="keywords" content="E-shop, boty">
     <meta name="description" content="E-shop na boty">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -85,8 +85,8 @@ $idBota = $_GET['id'];
 
 
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = 'mylocal'; 
+ $password = 'ZPgxK$r7#2QHCcy!';
 $dbname = "vanaj";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -95,8 +95,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 function image1()
 {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = 'mylocal'; 
+    $password = 'ZPgxK$r7#2QHCcy!';
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -112,8 +112,8 @@ function image1()
 function image2()
 {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = 'mylocal'; 
+    $password = 'ZPgxK$r7#2QHCcy!';
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -128,8 +128,8 @@ function image2()
 function image3()
 {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = 'mylocal'; 
+    $password = 'ZPgxK$r7#2QHCcy!';
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -144,8 +144,8 @@ function image3()
 function description()
 {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = 'mylocal'; 
+    $password = 'ZPgxK$r7#2QHCcy!';
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -160,8 +160,8 @@ function description()
 function price()
 {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = 'mylocal'; 
+    $password = 'ZPgxK$r7#2QHCcy!';
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -176,8 +176,8 @@ function price()
 function shoeName()
 {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = 'mylocal'; 
+    $password = 'ZPgxK$r7#2QHCcy!';
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -203,8 +203,8 @@ if (isset($_POST["size"])) {
 
 if (isset($_POST["addToCart"])) {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = 'mylocal'; 
+    $password = 'ZPgxK$r7#2QHCcy!';
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($size > 0) {
@@ -213,6 +213,11 @@ if (isset($_POST["addToCart"])) {
     $sql = "INSERT INTO kosik (idB, size) VALUES ('$idBota', '$size')";
 
     if (mysqli_query($conn, $sql)) {
+        
+        echo "<div class='alert'>";
+        header("Refresh: 1.5; dynamic.php?id=". $idBota);
+        echo "ADDED TO CART";
+        echo "</div>";
 
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
@@ -220,9 +225,20 @@ if (isset($_POST["addToCart"])) {
     $conn->close();
     
 }else{
-    echo "SELECT SIZE";
+    echo "<div class='alert'>";
+        header("Refresh: 1.5; dynamic.php?id=". $idBota);
+        echo "SELECT SIZE!";
+        echo "</div>";
 }
 }
+
 
 ?>
 
+
+<!--
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">CLOSE</span> 
+  ADDED TO CART!
+</div>
+-->
