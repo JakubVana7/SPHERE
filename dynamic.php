@@ -17,13 +17,13 @@
 <header>
         <span class="link">
             <a href="men.html" draggable="false">MEN</a>
-            <a href="woman.html" draggable="false">WOMAN</a>
+            <a href="woman.html" draggable="false">WOMEN</a>
         </span>
     <nav class="navigation">
         <a href="./homepage.html" draggable="false">SPHERE</a>
     </nav>
     <span class="about">
-            <a href="about.html" draggable="false">ABOUT</a>
+            <a href="about.php" draggable="false">ABOUT</a>
             <a href="cart.php" draggable="false">CART</a>
         </span>
 </header>

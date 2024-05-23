@@ -396,14 +396,21 @@ header {
     display: flex;
 }
 
-.left-section, .right-section {
+.left-section{
     width: 50%;
     margin: 5px;
     margin-top: 55px;
     border: 1px solid black;
-    overflow: hidden;
-    max-height: 92vh;
+    max-height: 90vh;
 
+}
+
+.right-section {
+    width: 50%;
+    margin: 5px;
+    margin-top: 55px;
+    border: 1px solid black;
+    max-height: 90vh;
 
 }
 
@@ -441,14 +448,14 @@ header {
 
 .checkout-button {
     color: black;
-    padding: 10px;
+    padding: 0px;
     background-color: white;
     border: none;
     cursor: pointer;
     width: 100%;
     font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 
 }
 
@@ -497,25 +504,22 @@ header {
     border-top: 1px solid black;
 }
 
-.delete-button {
-    background: none;
-    border: none;
-    padding-right: 20px;
-    padding-top: 120px;
-    font-size: 13px;
-    cursor: pointer;
-}
 
-.price-summary1{
+
+.cart-summary{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 20px;
+    color:#333;
 
 }
+
 /*------------------------------------------------------shopping-cart/product-----------------------------------------------------*/
 
 .product-block {
     display: flex;
     border-bottom: 1px solid black;
     height: 150px;
-
 }
 
 .product-block img {
@@ -544,7 +548,7 @@ header {
     overflow: hidden;
     justify-content: right;
     align-items: right;
-    margin-top: 15px;
+    margin-top: 5px;
     margin-left: 10px;
 
 }
@@ -553,22 +557,10 @@ header {
 
 .product-size {
     margin-left: 10px ;
-    margin-top: 5px;
+    margin-top: 15px;
 
 }
 
-.summary {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    border-top: 1px solid #000;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .scrollable-container {
     position: relative;
@@ -587,6 +579,15 @@ header {
 .finalprice-summary {
     font-size: 20px;
     font-weight: bold;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    padding-right: 20px;
+    padding-top: 120px;
+    font-size: 13px;
+    cursor: pointer;
 }
 /*------------------------------------------------------payment-----------------------------------------------------*/
 
@@ -647,5 +648,70 @@ input[type="radio"]:checked + img {
 
 }
 
+/*------------------------------------------------------about-----------------------------------------------------*/
+
+.about-section {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.body-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.jmena{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 20px;
+}
+
+.jmena h1{
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 20px;
+}
+.jmena li{
+    list-style: none;
+    padding-bottom: 15px;
+    text-align: left;
+}
+.jmena span{
+    font-weight: 600;
+    text-align: left;
+}
 
 
+
+.text-about{
+    text-align: left;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 20px;
+
+}
+
+#autori{
+    text-align: center;
+    padding: 20px;
+}
+
+#popisek{
+    margin: 20px;
+    width: 100%;
+}
+
+.vrsek{
+    padding: 20px;
+}
+
+.nakupy{
+    padding: 20px;
+}
