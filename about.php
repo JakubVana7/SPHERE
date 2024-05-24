@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
+    <title>About</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
             <a href="woman.html" draggable="false">WOMEN</a>
         </span>
         <nav class="navigation">
-            <a href="homepage.html" draggable="false">SPHERE</a>
+            <a href="index.html" draggable="false">SPHERE</a>
         </nav>
         <span class="about">
             <a href="about.php" draggable="false">ABOUT</a>
@@ -75,7 +75,7 @@
             $dbname = "vanaj";
             $conn = new mysqli($servername, $username, $password, $dbname);
 
-            $sql = "SELECT COUNT(idZ) as count FROM Zakaznik";
+            $sql = "SELECT COUNT(surname) as count FROM zakaznik";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {

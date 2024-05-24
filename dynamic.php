@@ -20,7 +20,7 @@
             <a href="woman.html" draggable="false">WOMEN</a>
         </span>
     <nav class="navigation">
-        <a href="./homepage.html" draggable="false">SPHERE</a>
+        <a href=".index.html" draggable="false">SPHERE</a>
     </nav>
     <span class="about">
             <a href="about.php" draggable="false">ABOUT</a>
