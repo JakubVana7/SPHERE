@@ -33,10 +33,10 @@
                 <div class="scrollable-container">
                     <?php 
                     ob_start();
-                    $servername = "localhost";
-                    $username = 'mylocal'; 
-                    $password = 'ZPgxK$r7#2QHCcy!';
-                    $dbname = "vanaj";
+                    $servername = 'localhost'; 
+            $username = 'root'; 
+            $password = ''; 
+            $dbname = "vanaj";s
                     $conn = new mysqli($servername, $username, $password, $dbname);
 
                     $priceSummary = 0;
@@ -69,10 +69,10 @@
 
 
                     if (isset($_POST['idKosik'])) {
-                        $servername = "localhost";
-                        $username = 'mylocal'; 
-                        $password = 'ZPgxK$r7#2QHCcy!';
-                        $dbname = "vanaj";
+                        $servername = 'localhost'; 
+            $username = 'root'; 
+            $password = ''; 
+            $dbname = "vanaj";
                         $conn = new mysqli($servername, $username, $password, $dbname);
 
                         $idKosikDelete = $_POST['idKosik'];
@@ -225,9 +225,9 @@ ob_start();
 function summary()
 {
     $servername = 'localhost'; 
-    $username = 'mylocal'; 
-    $password = 'ZPgxK$r7#2QHCcy!'; 
-    $dbname = "vanaj";
+            $username = 'root'; 
+            $password = ''; 
+            $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     $sql = "SELECT idB FROM objednavka";
@@ -250,9 +250,9 @@ function summary()
 function getID()
 {
     $servername = 'localhost'; 
-    $username = 'mylocal'; 
-    $password = 'ZPgxK$r7#2QHCcy!'; 
-    $dbname = "vanaj";
+            $username = 'root'; 
+            $password = ''; 
+            $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
 
@@ -266,9 +266,9 @@ function getID()
 
 
 $servername = 'localhost'; 
-$username = 'mylocal'; 
-$password = 'ZPgxK$r7#2QHCcy!'; 
-$dbname = "vanaj";
+            $username = 'root'; 
+            $password = ''; 
+            $dbname = "vanaj";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -276,9 +276,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 function price()
 {
     $servername = 'localhost'; 
-    $username = 'mylocal'; 
-    $password = 'ZPgxK$r7#2QHCcy!'; 
-    $dbname = "vanaj";
+            $username = 'root'; 
+            $password = ''; 
+            $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     $sql = "SELECT idB FROM objednavka";
@@ -297,9 +297,9 @@ function price()
 function shoeName()
 {
     $servername = 'localhost'; 
-    $username = 'mylocal'; 
-    $password = 'ZPgxK$r7#2QHCcy!'; 
-    $dbname = "vanaj";
+            $username = 'root'; 
+            $password = ''; 
+            $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     $sql = "SELECT idB FROM objednavka";
@@ -326,9 +326,9 @@ if (isset($_GET["submit"])) {
 
 
     $servername = 'localhost'; 
-    $username = 'mylocal'; 
-    $password = 'ZPgxK$r7#2QHCcy!'; 
-    $dbname = "vanaj";
+            $username = 'root'; 
+            $password = ''; 
+            $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     if (!$conn) {
@@ -343,8 +343,8 @@ if (isset($_GET["submit"])) {
     if (mysqli_query($conn, $sql)) {
 
         $servername = 'localhost'; 
-        $username = 'mylocal'; 
-        $password = 'ZPgxK$r7#2QHCcy!'; 
+        $username = 'root'; 
+        $password = ''; 
         $dbname = "vanaj";
         $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -365,8 +365,8 @@ if (isset($_GET["submit"])) {
     }
 
     $servername = 'localhost'; 
-    $username = 'mylocal'; 
-    $password = 'ZPgxK$r7#2QHCcy!'; 
+    $username = 'root'; 
+    $password = ''; 
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 

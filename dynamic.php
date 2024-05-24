@@ -84,10 +84,10 @@
 $idBota = $_GET['id'];
 
 
-$servername = "localhost";
-$username = 'mylocal'; 
-$password = 'ZPgxK$r7#2QHCcy!';
-$dbname = "vanaj";
+$servername = 'localhost'; 
+            $username = 'root'; 
+            $password = ''; 
+            $dbname = "vanaj";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -95,8 +95,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 function image1()
 {
     $servername = 'localhost'; 
-    $username = 'mylocal'; 
-    $password = 'ZPgxK$r7#2QHCcy!'; 
+    $username = 'root'; 
+    $password = ''; 
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -112,8 +112,8 @@ function image1()
 function image2()
 {
     $servername = 'localhost'; 
-    $username = 'mylocal'; 
-    $password = 'ZPgxK$r7#2QHCcy!'; 
+    $username = 'root'; 
+    $password = ''; 
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -127,9 +127,9 @@ function image2()
 
 function image3()
 {
-    $servername = "localhost";
-    $username = 'mylocal'; 
-    $password = 'ZPgxK$r7#2QHCcy!';
+    $servername = 'localhost'; 
+    $username = 'root'; 
+    $password = ''; 
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -144,8 +144,8 @@ function image3()
 function description()
 {
     $servername = 'localhost'; 
-    $username = 'mylocal'; 
-    $password = 'ZPgxK$r7#2QHCcy!'; 
+    $username = 'root'; 
+    $password = ''; 
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -160,8 +160,8 @@ function description()
 function price()
 {
     $servername = 'localhost'; 
-    $username = 'mylocal'; 
-    $password = 'ZPgxK$r7#2QHCcy!'; 
+    $username = 'root'; 
+    $password = ''; 
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -176,8 +176,8 @@ function price()
 function shoeName()
 {
     $servername = 'localhost'; 
-    $username = 'mylocal'; 
-    $password = 'ZPgxK$r7#2QHCcy!'; 
+    $username = 'root'; 
+    $password = ''; 
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -203,8 +203,8 @@ if (isset($_POST["size"])) {
 
 if (isset($_POST["addToCart"])) {
     $servername = 'localhost'; 
-    $username = 'mylocal'; 
-    $password = 'ZPgxK$r7#2QHCcy!'; 
+    $username = 'root'; 
+    $password = ''; 
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($size > 0) {
