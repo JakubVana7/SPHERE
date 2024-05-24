@@ -85,6 +85,19 @@
             } else {
                 echo "<p>Žádný zákazník zatím nenakoupil.<p>";
             }
+
+            echo "<br>";
+
+            $sql = "SELECT SUM(price) as sum FROM boty";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    echo "<p>Cena všech našich bot: " . $row["sum"] . " €<p>";
+                }
+            } else {
+                echo "<p><p>";
+            }
             ?>
         </div>
     </div>
