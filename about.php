@@ -69,9 +69,9 @@
         
         <div class='nakupy'>
             <?php
-            $servername = "localhost";
+            $servername = 'localhost'; 
             $username = 'mylocal'; 
-            $password = 'ZPgxK$r7#2QHCcy!';
+            $password = 'ZPgxK$r7#2QHCcy!'; 
             $dbname = "vanaj";
             $conn = new mysqli($servername, $username, $password, $dbname);
 

@@ -224,9 +224,9 @@
 ob_start();
 function summary()
 {
-    $servername = "localhost";
+    $servername = 'localhost'; 
     $username = 'mylocal'; 
- $password = 'ZPgxK$r7#2QHCcy!';
+    $password = 'ZPgxK$r7#2QHCcy!'; 
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -249,9 +249,9 @@ function summary()
 
 function getID()
 {
-    $servername = "localhost";
+    $servername = 'localhost'; 
     $username = 'mylocal'; 
- $password = 'ZPgxK$r7#2QHCcy!';
+    $password = 'ZPgxK$r7#2QHCcy!'; 
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -265,10 +265,9 @@ function getID()
 }
 
 
-$servername = "localhost";
+$servername = 'localhost'; 
 $username = 'mylocal'; 
-
- $password = 'ZPgxK$r7#2QHCcy!';
+$password = 'ZPgxK$r7#2QHCcy!'; 
 $dbname = "vanaj";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -276,10 +275,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 function price()
 {
-    $servername = "localhost";
+    $servername = 'localhost'; 
     $username = 'mylocal'; 
-
- $password = 'ZPgxK$r7#2QHCcy!';
+    $password = 'ZPgxK$r7#2QHCcy!'; 
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -298,9 +296,9 @@ function price()
 
 function shoeName()
 {
-    $servername = "localhost";
+    $servername = 'localhost'; 
     $username = 'mylocal'; 
- $password = 'ZPgxK$r7#2QHCcy!';
+    $password = 'ZPgxK$r7#2QHCcy!'; 
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -327,9 +325,9 @@ if (isset($_GET["submit"])) {
     # code...
 
 
-    $servername = "localhost";
+    $servername = 'localhost'; 
     $username = 'mylocal'; 
- $password = 'ZPgxK$r7#2QHCcy!';
+    $password = 'ZPgxK$r7#2QHCcy!'; 
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -344,9 +342,9 @@ if (isset($_GET["submit"])) {
 
     if (mysqli_query($conn, $sql)) {
 
-        $servername = "localhost";
+        $servername = 'localhost'; 
         $username = 'mylocal'; 
- $password = 'ZPgxK$r7#2QHCcy!';
+        $password = 'ZPgxK$r7#2QHCcy!'; 
         $dbname = "vanaj";
         $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -366,9 +364,9 @@ if (isset($_GET["submit"])) {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $servername = 'localhost'; 
+    $username = 'mylocal'; 
+    $password = 'ZPgxK$r7#2QHCcy!'; 
     $dbname = "vanaj";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
